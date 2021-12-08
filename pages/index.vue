@@ -16,7 +16,6 @@
         outlined
         dense
         v-model="searchText"
-        @click:append="search"
         class="hidden-sm-and-down"
       ></v-text-field><v-icon>mdi-microphone</v-icon>
 
@@ -442,17 +441,8 @@ export default {
       { text: 'Policy & Safety', link: '#' },
       { text: 'Test new features', link: '#' }
     ],
-    menuBar: ''
+    searchText: ''
   }),
-  methods: {
-    search() {
-      if (!this.searchText) return
-      this.$router.push({
-        name: 'Search',
-        query: { 'search-query': this.searchText }
-      })
-    }
-  },
   mounted() {
     this.drawer = this.$vuetify.breakpoint.mdAndDown ? false : true
     this.drawer = this.$route.name === 'Watch' ? false : this.drawer
