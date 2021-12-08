@@ -442,7 +442,7 @@ export default {
       { text: 'Policy & Safety', link: '#' },
       { text: 'Test new features', link: '#' }
     ],
-    searchText: ''
+    menuBar: ''
   }),
   methods: {
     search() {
